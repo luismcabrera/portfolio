@@ -1,0 +1,144 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.container {
+	composes: sectionContainer from '../../../styles/utils.module.scss';
+}
+
+.content {
+	@media (min-width: $breakpoint-lg) {
+		display: flex;
+	}
+}
+
+.title {
+	margin-right: auto;
+}
+
+.animation {
+	position: relative;
+	display: none;
+	background-repeat: no-repeat;
+	// background-position-y: center;
+	// background-position-x: center;
+	@media (min-width: $breakpoint-lg) {
+		display: block;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+.animationRobot {
+	width: 50%;
+	animation-name: serpenter;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.animationRotate {
+	&:hover {
+		cursor: pointer;
+		animation-name: rotateRobot;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
+
+.messages {
+	position: absolute;
+	top: 10rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-align: center;
+	// margin-top: -50rem;
+}
+
+.message {
+	font-size: 1.25rem;
+	max-width: 15rem;
+	padding: 1rem;
+	border-radius: 1rem;
+	background-color: red;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	transition: all 0.35s;
+	// background-color: var(--color-black-gray);
+	// color: yellowgreen;
+	$messageColor: yellowgreen;
+	background-color: $messageColor;
+	color: black;
+	font-family: monospace;
+	font-weight: bold;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+
+	&::after {
+		// top: calc(100% + 1rem);
+		content: '';
+		position: absolute;
+		top: 100%;
+		$triangleSize: 1rem;
+		left: calc(50%);
+		transform: translateX(-50%);
+		background-image: linear-gradient(to right, red, blue);
+		border-top: solid $triangleSize darken($color: $messageColor, $amount: 10%);
+		border-left: solid $triangleSize transparent;
+		border-right: solid $triangleSize transparent;
+	}
+}
+
+.messageTextLite {
+	font-size: 1rem;
+}
+
+.messageHide {
+	transform: translateY(200%) scale(0);
+	// transform: scale(0);
+	opacity: 0;
+}
+
+.grid {
+	@media (min-width: $breakpoint-lg) {
+		width: 50%;
+		margin-right: 4rem;
+	}
+}
+
+@keyframes serpenter {
+	from {
+		transform: translate(-1rem, 1rem);
+	}
+
+	25% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(1rem, 1rem);
+	}
+
+	75% {
+		transform: translate(0, 0);
+	}
+
+	to {
+		transform: translate(-1rem, 1rem);
+	}
+}
+
+@keyframes rotateRobot {
+	from {
+		transform: rotate(0);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

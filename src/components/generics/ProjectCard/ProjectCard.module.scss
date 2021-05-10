@@ -1,0 +1,50 @@
+.imgWrapper {
+	// width: 100%;
+	// background-color: red;
+	margin-bottom: 1em;
+	width: 100% !important;
+	* {
+		width: 100% !important;
+		height: 12em;
+	}
+	
+	// img {
+	// 	width: 100% !important;
+	// 	display: block;
+	// 	object-fit: cover;
+	// 	border-radius: 1rem;
+	// }
+}
+
+.img {
+	width: 100% !important;
+	display: block;
+	object-fit: cover;
+	border-radius: 1rem;
+}
+
+// .img {
+// img {
+// background-color: red;
+// display: flex;
+// width: 100% !important;
+// height: 12em;
+// margin-bottom: 1em;
+// object-fit: cover;
+// border-radius: 1rem;
+// }
+// }
+
+.title {
+	// color: var(--color-gray-white);
+	// color: #ccc;
+}
+
+// .description {
+
+// }
+
+.buttonList {
+	margin-top: 1rem;
+	// background-color: rgba(#aaa, .1);
+}

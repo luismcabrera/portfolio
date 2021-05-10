@@ -1,0 +1,133 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.container {
+	composes: sectionContainer from '../../../styles/utils.module.scss';
+	// align-items: flex-end;
+	// justify-content: flex-end;
+	background-repeat: no-repeat;
+	// background-position-x: -40%;
+	background-position-x: 50vw;
+	background-position-y: 60vw;
+	@media (min-width: $breakpoint-md) { 
+		background-position-x: -40%;
+		background-position-y: initial;
+
+	}
+	// filter: opacity(10%);
+	// background-image: none !important;
+}
+
+.content {
+	@media (min-width: $breakpoint-md) {
+		display: flex;
+	}
+}
+
+.animation {
+	position: relative;
+	display: none;
+	text-align: right;
+	width: 35%;
+	@media (min-width: $breakpoint-md) {
+		display: block;
+		// flex: 1;
+		margin-right: 2rem;
+	}
+}
+
+.message {
+	background-color: darken($color: turquoise, $amount: 20%);
+	border-radius: .5rem;
+	padding: 1em;
+	position: absolute;
+	top: -2rem;
+	left: 50%;
+	transform: translateX(-50%);
+	width: fit-content;
+	text-align: center;
+	font-family: monospace;
+	transition: all .25s;
+	&::after {
+		$messageColor: lighten($color: turquoise, $amount: 40%);
+		content: '';
+		position: absolute;
+		top: 100%;
+		$triangleSize: 1rem;
+		left: 50%;
+		transform: translateX(-50%);
+		// background-image: linear-gradient(to right, red, blue);
+		border-top: solid $triangleSize darken($color: $messageColor, $amount: 10%);
+		border-left: solid $triangleSize transparent;
+		border-right: solid $triangleSize transparent;
+	}
+}
+
+.messageHide {
+	transform: translateX(-50%) translateY(100%) scale(0);
+	opacity: 0;
+}
+
+.messageError {
+	background-color: var(--color-danger);
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	// justify-content: flex-end;
+	// align-items: flex-end;
+	@media (min-width: $breakpoint-md) {
+		// width: 50%;
+		flex: 1;
+	}
+}
+
+.form {
+	text-align: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.title {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.buttonGroup {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.paragraph {
+	// background-color: red;
+	text-align: center;
+}
+
+.submitButton {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 4rem;
+	padding-right: 4rem;
+	// float: right;
+	// margin-left: auto;
+}
+
+.avatarRobotic {
+	width: 75%;
+	margin-top: 3rem;
+	animation-name: levitate;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	user-select: none;
+}
+
+@keyframes levitate {
+	from, to {
+		transform: translateY(-.25rem);
+	}
+	
+	50% {
+		transform: translateY(.25rem);
+	}
+}

@@ -1,0 +1,93 @@
+.button {
+	background-color: transparent;
+	box-sizing: content-box;
+	padding: 0.5rem 2rem;
+	border-radius: 30px;
+	border: 0.125rem solid var(--color-white);
+	cursor: pointer;
+	transition: all 0.25s;
+	// display: flex;
+	position: relative;
+
+	&:focus {
+		outline: none;
+		border-color: white;
+	}
+	&:hover {
+		// font-size: .9em !important;
+		transform: translateY(-0.1rem);
+		background-color: var(--color-white);
+		border-color: white;
+		color: black;
+	}
+}
+
+.button-primary {
+	border-color: var(--color-primary);
+	&:hover {
+	// ,
+	// &:focus 
+	// {
+		// border-color: red;
+		border-color: var(--color-primary-light);
+		background-color: var(--color-primary);
+		color: white;
+	}
+	&:focus {
+		border-color: var(--color-primary-light);
+	}
+}
+
+.buttonLink {
+	border-color: transparent;
+	&:hover, &:focus {
+		background-color: transparent;
+		// color: initial !important;
+		border-color: transparent;
+		color: white;
+	}
+}
+
+.buttonLinkPrimary {
+	composes: buttonLink;
+	color: var(--color-primary);
+}
+
+.buttonLinkSuccess {
+	composes: buttonLink;
+	color: var(--color-success);
+	&:hover {
+		// color: var(--color-success);
+		color: var(--color-success-light);
+	}
+}
+
+.icon {
+	font-size: 1rem;
+	position: absolute;
+	right: 1.5em;
+	width: 1em;
+	top: 50%;
+	transform: translateY(-40%);
+	transition: transform .25s;
+}
+
+@keyframes animationShow {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+
+.button:disabled,
+.button[disabled]{
+//   border: 1px solid #999999;
+//   background-color: var(--color-black-gray) !important;
+  border-color: var(--color-gray) !important;
+  background-color: var(--color-black-gray);
+//   color: #666666;
+}

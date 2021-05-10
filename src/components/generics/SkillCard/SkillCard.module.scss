@@ -1,0 +1,34 @@
+.SkillCard {
+	display: flex;
+}
+
+.iconContainer,
+.content {
+	padding: 1rem;
+}
+
+.iconContainer {
+	display: flex;
+	justify-content: center;
+	// background-color: orange;
+}
+
+.icon {
+	font-size: 2.5rem;
+    // stroke: chartreuse !important;
+}
+
+.content {
+	padding-left: 0;
+	// background-color: red;
+}
+
+.title {
+    margin-bottom: .25em;
+}
+
+.body {
+	font-size: 0.8em;
+	composes: justify-left from '../../../styles/utils.module.scss';
+
+}

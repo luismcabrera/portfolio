@@ -1,0 +1,40 @@
+.container {
+	padding-left: calc(1rem + 10vw);
+	padding-right: calc(1rem + 10vw);
+}
+
+.sectionContainer {
+	composes: container;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+._justify {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.justify {
+	composes: _justify;
+	text-align-last: center;
+}
+
+.justify-left {
+	composes: _justify;
+	text-align-last: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}

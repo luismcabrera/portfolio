@@ -1,15 +1,29 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "^10.0.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
-  }
+	"name": "my-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start"
+	},
+	"dependencies": {
+		"classnames": "^2.3.1",
+		"components": "^0.1.0",
+		"emailjs-com": "^2.6.4",
+		"lodash": "^4.17.21",
+		"next": "^10.0.0",
+		"react": "17.0.1",
+		"react-dom": "17.0.1",
+		"react-hook-form": "^7.4.2",
+		"react-intersection-observer": "^8.31.1",
+		"react-lineicons": "^2.2.0",
+		"react-particles-js": "^3.4.1",
+		"sass": "^1.32.12",
+		"styled-components": "^5.2.3"
+	},
+	"devDependencies": {
+		"@iconify/icons-simple-line-icons": "^1.1.0",
+		"@iconify/react": "^1.1.4"
+	}
 }

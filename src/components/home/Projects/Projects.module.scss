@@ -1,0 +1,41 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.container {
+	composes: sectionContainer from '../../../styles/utils.module.scss';
+}
+
+.title {
+    margin-right: auto;
+}
+
+.paragraph {
+    margin-bottom: 1rem;
+	composes: justify from '../../../styles/utils.module.scss';
+}
+
+.proectsGrid {
+    @media (min-width: $breakpoint-md) {   
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+
+    @media (min-width: $breakpoint-xl) {   
+        // grid-template-columns: 1fr 1fr 1fr;
+
+    }
+
+
+
+    > *:not(:last-child) {
+        margin-bottom: 1rem;
+        @media (min-width: $breakpoint-md) {
+            margin-bottom: 0;
+        }
+    }
+    
+}
+
+.card__description {
+    min-height: 3em;
+}

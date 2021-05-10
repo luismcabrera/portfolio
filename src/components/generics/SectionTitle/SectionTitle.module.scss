@@ -1,0 +1,31 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.sectionTitle {
+	position: relative;
+	--lineHeight: 0.125rem;
+	margin-bottom: calc(var(--lineHeight) + 2rem);
+	// margin-bottom: calc(var(--lineHeight) + 1rem);
+
+	@media(min-width: $breakpoint-md) {
+		font-size: 2rem;
+	}
+
+	&::before,
+	&::after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 0;
+		height: var(--lineHeight);
+	}
+
+	&::before {
+		width: 100%;
+		background-color: var(--color-black-gray);
+	}
+
+	&::after {
+		width: 25%;
+		background-color: var(--color-success);
+	}
+}

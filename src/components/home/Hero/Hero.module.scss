@@ -1,0 +1,74 @@
+@import '../../../styles/breakpoints.module.scss';
+
+.container {
+	composes: container from '../../../styles/utils.module.scss';
+	padding-top: 5rem;
+	padding-bottom: 2.5rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background-size: 30%;
+	// @media(max-width)
+	// background-position-y: 175%;
+	background-repeat: repeat-x;
+	
+	
+	
+	@media (min-width: $breakpoint-sm) {
+		background-size: 20%;
+	}
+	@media (min-width: $breakpoint-md) {
+		flex-direction: row;
+		background-size: 10%;
+	}
+	@media (min-width: $breakpoint-xl) {
+		// padding-top: 2rem;
+	}
+}
+
+.avatar {
+	width: 40vw !important;
+	height: 40vw !important;
+	img {
+		// transform: scale(.5);
+		// filter: contrast(90%) grayscale(10%);
+		filter: contrast(70%) grayscale(10%);
+	}
+	@media (min-width: $breakpoint-sm) {
+		width: 30vw !important;
+		height: 30vw !important;
+	}
+	@media (min-width: $breakpoint-md) {
+		flex: 0 0 auto;
+		margin-right: 2rem;
+		width: 18rem !important;
+		height: 18rem !important;
+	}
+	// @media (min-width: $breakpoint-xl) {
+	// }
+}
+
+.profileCard {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.profession {
+	color: var(--color-gray);
+}
+
+.paragraph {
+	composes: justify from '../../../styles/utils.module.scss';
+}
+
+.buttonList {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 1rem;
+
+	*:not(:last-child) {
+		margin-bottom: 0.5rem;
+	}
+}

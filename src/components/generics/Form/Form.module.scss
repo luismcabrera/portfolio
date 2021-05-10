@@ -1,0 +1,40 @@
+.form {
+	padding: 1rem;
+	// > .control {
+	> *:not(:first-child) {
+		margin-top: 1rem;
+	}
+}
+
+.control {
+	width: 100%;
+	background-color: transparent;
+	background-color: rgba(var(--color-black-medium), 1);
+	background-color: rgba(#333, 0.5);
+	border: none;
+	border-bottom: 0.1rem solid transparent;
+	// border-bottom: 0.1rem solid var(--color-gray);
+	color: var(--color-white);
+	// transition: border-color var(--transition-time) ease-in-out;
+	transition: border-color .15s ease-in-out;
+	padding: .75em 2em;
+	// font-size: 0.9em;
+	border-radius: 2rem;
+	&::placeholder {
+		color: var(--color-black-gray-light);
+		// font-size: 0.85em;
+	}
+
+	&:focus {
+		outline: none;
+		// border-color: var(--color-white);
+		border-color: var(--color-primary);
+	}
+}
+
+.controlError {
+	border-color: var(--color-danger);
+	&:focus {
+		border-color: var(--color-danger-light);
+	}
+}

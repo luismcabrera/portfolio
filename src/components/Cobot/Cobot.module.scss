@@ -1,0 +1,17 @@
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.gestureContainer {
+	// min-width: 100px;
+	// min-height: 100px;
+	position: absolute;
+	top: 50%;
+	bottom: 20%;
+	left: 30%;
+	right: 30%;
+	// z-index: 1;
+}

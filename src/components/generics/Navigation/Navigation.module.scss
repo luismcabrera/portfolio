@@ -1,0 +1,163 @@
+@import '../../../styles/breakpoints.module.scss';
+
+._baseSpacing {
+	composes: container from '../../../styles/utils.module.scss';
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+.navigation {
+	// background-color: aquamarine;
+	composes: _baseSpacing;
+	width: 100%;
+	display: flex;
+	z-index: 1; // TODO: React Create Portal
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	// transition: all .25s;
+
+	@media (min-width: $breakpoint-md) {
+	}
+}
+
+.navigationFixed {
+	// background-color: red;
+	position: fixed;
+	background-color: var(--color-black);
+	border-bottom: 0.1rem solid var(--color-black-gray);
+	top: 0;
+	left: 0;
+	// transition: all .25s;
+	transform: translateY(-100%);
+}
+
+.navigationFixedShow {
+	transform: translateY(0);
+}
+
+.navigation__left,
+.navigation__right {
+	display: flex;
+	align-items: center;
+}
+
+.navigation__left {
+	// background-color: lightcoral;
+	@media (min-width: $breakpoint-md) {
+	}
+}
+
+.navigation__right {
+	// background-color: brown;
+
+	@media (min-width: $breakpoint-md) {
+		flex: 1;
+	}
+}
+
+.logo {
+	font-size: 1.25rem;
+	// display: flex;
+	// align-items: center;
+	// background-color: red;
+	cursor: pointer;
+}
+
+.logo__icon {
+	// font-size: 1rem;
+	margin-right: 0.5rem;
+	width: 2rem;
+	// filter: grayscale(.7);
+	color: var(--color-primary-lighten);
+}
+
+.buttonMenu {
+	// background-color: cadetblue;
+	display: flex;
+	align-items: center;
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	transition: transform .25s;
+	@media (min-width: $breakpoint-md) {
+		display: none;
+	}
+}
+
+.buttonMenuActive {
+	transform: scale(1.1);
+}
+
+.collapseMenu {
+	// background-color: red;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.25s;
+
+	@media (min-width: $breakpoint-md) {
+		position: static;
+		flex-direction: row;
+		justify-content: flex-end;
+		// align-items: center;
+		// width: 200px !important;
+	}
+}
+
+.collapseMenuIsHide {
+	@media not all and (min-width: $breakpoint-md) {
+		transform: scale(0);
+	}
+}
+
+.collapseMenu__link {
+	display: block;
+	background-color: rgba(var(--color-black-medium-rgb), 0.95);
+	backdrop-filter: blur(2px);
+	border-bottom: 0.0125rem solid var(--color-black-gray);
+	text-align: center;
+	composes: _baseSpacing;
+	transition: all 0.125s;
+	position: relative;
+	text-transform: capitalize;
+
+	@media (min-width: $breakpoint-md) {
+		padding: 0.5rem 1rem;
+		font-size: 0.85rem;
+		border-bottom: none;
+		background-color: initial;
+		overflow-x: hidden;
+		&:last-of-type {
+			padding-right: 0;
+		}
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		&::after {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			content: '';
+			width: 100%;
+			height: 0.125rem;
+			background-color: var(--color-success);
+			border-radius: 2rem;
+			transform: translateX(-100%);
+			transition: all 0.25s;
+		}
+
+		&:hover {
+			// transform: scale(1.05);
+			cursor: pointer;
+			&::after {
+				transform: translateX(0);
+			}
+		}
+	}
+}
