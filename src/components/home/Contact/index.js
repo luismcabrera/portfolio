@@ -11,10 +11,13 @@ import useForm from '../../../hooks/useForm';
 import texts from './data/texts';
 import { useGlobalLang } from '../../../global/lang';
 import socialLinks from './data/socialLinks';
+// import Robotic from '../../Robotic';
 import emailjs from 'emailjs-com';
 emailjs.init('user_2U9y2ZqcRIdQsQvjmb6Hv');
+// import roboticImg from '../../svg/robotic.svg';
 
 const treeImg = '/img/tree1.svg';
+const roboticImg = '/img/robotic.svg';
 
 const initialFormValues = {
 	email: '',
@@ -128,7 +131,8 @@ export default function Contact({ children, className, style, ...restProps }) {
 					>
 						{message}
 					</p>
-					<img className={styles.avatarRobotic} src="/img/robotic.svg" alt="robotic" draggable={false} />
+					<img className={styles.avatarRobotic} src={roboticImg} alt="robotic" draggable={false} />
+					{/* <Robotic className={styles.avatarRobotic} src="/img/robotic.svg" alt="robotic" draggable={false} /> */}
 				</div>
 				<div className={styles.info}>
 					<Form className={styles.form} ref={formRef} onSubmit={handleSubmit(onSubmit)}>
@@ -143,14 +147,28 @@ export default function Contact({ children, className, style, ...restProps }) {
 							placeholder={texts.inputs.message.defaultPlaceholder[lang]}
 							{...register('message')}
 						/>
-						<Button variant="primary" className={styles.submitButton} loading={isLoading} check={isSended} disabled={isLoading}>
+						<Button
+							variant="primary"
+							className={styles.submitButton}
+							loading={isLoading}
+							check={isSended}
+							disabled={isLoading}
+						>
 							Send
 						</Button>
 					</Form>
-					 
+
 					<SocialButtonGroup className={styles.buttonGroup}>
 						{socialLinks.map(({ Icon, url }, index) => (
-							<SocialButtonGroup.Button as="a" Icon={Icon} href={url} key={index} target="_blank" rel="noopener" rel="noreferrer"/>
+							<SocialButtonGroup.Button
+								as="a"
+								Icon={Icon}
+								href={url}
+								key={index}
+								target="_blank"
+								rel="noopener"
+								rel="noreferrer"
+							/>
 						))}
 					</SocialButtonGroup>
 				</div>

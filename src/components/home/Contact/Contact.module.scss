@@ -8,10 +8,9 @@
 	// background-position-x: -40%;
 	background-position-x: 50vw;
 	background-position-y: 60vw;
-	@media (min-width: $breakpoint-md) { 
+	@media (min-width: $breakpoint-md) {
 		background-position-x: -40%;
 		background-position-y: initial;
-
 	}
 	// filter: opacity(10%);
 	// background-image: none !important;
@@ -37,7 +36,7 @@
 
 .message {
 	background-color: darken($color: turquoise, $amount: 20%);
-	border-radius: .5rem;
+	border-radius: 0.5rem;
 	padding: 1em;
 	position: absolute;
 	top: -2rem;
@@ -46,9 +45,12 @@
 	width: fit-content;
 	text-align: center;
 	font-family: monospace;
-	transition: all .25s;
+	transition: all 0.25s;
 	&::after {
-		$messageColor: lighten($color: turquoise, $amount: 40%);
+		$messageColor: lighten(
+			$color: turquoise,
+			$amount: 40%,
+		);
 		content: '';
 		position: absolute;
 		top: 100%;
@@ -123,11 +125,12 @@
 }
 
 @keyframes levitate {
-	from, to {
-		transform: translateY(-.25rem);
+	from,
+	to {
+		transform: translateY(-0.25rem);
 	}
-	
+
 	50% {
-		transform: translateY(.25rem);
+		transform: translateY(0.25rem);
 	}
 }
