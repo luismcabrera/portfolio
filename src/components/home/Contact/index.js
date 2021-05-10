@@ -17,7 +17,7 @@ emailjs.init('user_2U9y2ZqcRIdQsQvjmb6Hv');
 // import roboticImg from '../../svg/robotic.svg';
 
 const treeImg = '/img/tree1.svg';
-const roboticImg = '/img/robotic.svg';
+const roboticImg = '/img/Robotic.svg';
 
 const initialFormValues = {
 	email: '',
