@@ -116,7 +116,7 @@ export default function Contact({ children, className, style, ...restProps }) {
 			style={{ backgroundImage: `url(${treeImg})`, ...style }}
 			id="contact"
 		>
-			<SectionTitle className={styles.title}>{texts.title[lang]} 2</SectionTitle>
+			<SectionTitle className={styles.title}>{texts.title[lang]}</SectionTitle>
 			<div className={styles.content}>
 				<div className={styles.animation}>
 					<p
