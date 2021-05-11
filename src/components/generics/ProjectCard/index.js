@@ -14,7 +14,13 @@ export default function ProjectCard({ children, className, ...restProps }) {
 ProjectCard.Img = ({ className, imgClassName, ...restProps }) => {
 	return (
 		<div className={cn(styles.imgWrapper, className)}>
-			<Image className={cn(styles.img, imgClassName)} width={200} height={100} {...restProps} />
+			<Image 
+				width={200} 
+				height={100}
+				layout="responsive"
+				className={cn(styles.img, imgClassName)} 
+				{...restProps}
+			 />
 		</div>
 	);
 };
