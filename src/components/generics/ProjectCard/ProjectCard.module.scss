@@ -1,6 +1,6 @@
 .container {
 	&:hover .img {
-		filter: contrast(85%) grayscale(10%);
+		filter: contrast(95%) grayscale(10%);
 	}
 }
 
@@ -14,34 +14,15 @@
 		height: 12em;
 	}
 
-	// img {
-	// 	width: 100% !important;
-	// 	display: block;
-	// 	object-fit: cover;
-	// 	border-radius: 1rem;
-	// }
+	.img {
+		width: 100% !important;
+		display: block;
+		object-fit: cover;
+		border-radius: 1rem;
+		filter: contrast(80%) grayscale(10%);
+		transition: filter 0.25s;
+	}
 }
-
-.img {
-	width: 100% !important;
-	display: block;
-	object-fit: cover;
-	border-radius: 1rem;
-	filter: contrast(70%) grayscale(10%);
-	transition: filter 0.25s;
-}
-
-// .img {
-// img {
-// background-color: red;
-// display: flex;
-// width: 100% !important;
-// height: 12em;
-// margin-bottom: 1em;
-// object-fit: cover;
-// border-radius: 1rem;
-// }
-// }
 
 .title {
 	// color: var(--color-gray-white);

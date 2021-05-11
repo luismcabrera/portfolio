@@ -153,8 +153,9 @@ export default function Contact({ children, className, style, ...restProps }) {
 							loading={isLoading}
 							check={isSended}
 							disabled={isLoading}
+							large
 						>
-							Send
+							Enviar
 						</Button>
 					</Form>
 

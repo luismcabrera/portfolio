@@ -6,10 +6,11 @@ import { Icon } from '@iconify/react';
 import NoteIcon from '@iconify/icons-simple-line-icons/check';
 
 function ButtonContainer(props, ref) {
-	const { className, children, variant, as: Tag = 'button', loading, check, ...restProps } = props;
+	const { className, children, variant, as: Tag = 'button', loading, check, large, ...restProps } = props;
 	const classes = cn(
 		'button',
 		styles.button,
+		{ [styles.buttonLarge]: large },
 		{ [styles['button-primary']]: variant === 'primary' },
 		{ [styles.buttonLink]: variant === 'link' },
 		{ [styles.buttonLinkPrimary]: variant === 'link-primary' },
