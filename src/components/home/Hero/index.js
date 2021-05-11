@@ -30,14 +30,20 @@ export default function Hero() {
 				<h1 className="mb-1">{texts.profileName}</h1>
 				<p className={styles.paragraph}>{texts.profileCard.paragraph[lang]}</p>
 				<div className={styles.buttonList}>
-					<Button variant="primary" large as="a" href={downloadLinkCv} loading={isLoadingDownloadCV} onClick={handleDownloadCv} disabled={isLoadingDownloadCV}>
+					<Button
+						variant="primary"
+						large
+						as="a"
+						href={downloadLinkCv}
+						loading={isLoadingDownloadCV}
+						onClick={handleDownloadCv}
+						disabled={isLoadingDownloadCV}
+					>
 						{texts.profileCard.buttons.downloadCv[lang]}
 					</Button>
 					<Link href="#contact">
 						{/* <a> */}
-						<Button as="a" >
-							{texts.profileCard.buttons.contact[lang]}
-						</Button>
+						<Button as="a">{texts.profileCard.buttons.contact[lang]}</Button>
 						{/* </a> */}
 					</Link>
 				</div>

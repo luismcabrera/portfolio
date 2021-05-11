@@ -51,6 +51,9 @@
 .buttonLinkPrimary {
 	composes: buttonLink;
 	color: var(--color-primary);
+	&:focus {
+		color: red !important;
+	}
 }
 
 .buttonLinkSuccess {

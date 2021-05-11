@@ -60,10 +60,14 @@ export default function Navigation({ children, className, fixed, ...restProps })
 			{...restProps}
 		>
 			<div className={styles.navigation__left}>
-				<h2 className={styles.logo}>
-					<span className={styles.logo__icon}>{`{ Dev }`}</span>
-					Luis Cabrera
-				</h2>
+				<Link href="#home">
+					<a>
+						<h2 className={styles.logo}>
+							<span className={styles.logo__icon}>{`{ Dev }`}</span>
+							Luis Cabrera
+						</h2>
+					</a>
+				</Link>
 			</div>
 			<div className={styles.navigation__right}>
 				<div
